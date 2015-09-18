@@ -1,0 +1,23 @@
+<!-- insert_before "[data-hook='buttons']" -->
+<%#-------------------------------------------------%>
+<%# Recently Viewed Settings                        %>
+<%#-------------------------------------------------%>
+<div class='row'>
+  <div class='col-sm-6'>
+    <div class='panel panel-default security'>
+      <div class='panel-heading'>
+        <h1 class='panel-title'>
+          <%= Spree.t(:recently_viewed_settings)%>
+        </h1>
+      </div>
+      <div class='panel-body'>
+        <div class="form-group" data-hook="admin_general_setting_input_name">
+          <%= label_tag :viewed_products_max_count %>
+          <%= preference_field_tag(:viewed_products_max_count,
+                                   Spree::RecentlyViewed::Config[:recently_viewed_products_max_count],
+                                   type: :integer) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,12 @@
-RSpec.feature 'Recently Viewed Products', :js do
-  background do
+require 'spec_helper'
+
+describe 'Recently Viewed Products', { type: :feature, js: true } do
+
+  before do
     %w(Mug Shirt Jersey).each { |name| create(:product, name: "#{name}") }
   end
 
-  scenario 'keep track of recently viewed products' do
+  it 'keep track of recently viewed products' do
     visit spree.root_path
     click_link 'Mug'
     click_link 'Home'

@@ -1,0 +1,4 @@
+pt-BR:
+  spree:
+    recently_viewed_settings: "Configurações dos últimos produtos visualizados"
+    viewed_products_max_count: Quantidade de produtos
