@@ -39,6 +39,7 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.include Spree::TestingSupport::UrlHelpers
+  config.include Devise::TestHelpers, :type => :controller
 
   config.mock_with :rspec
   config.color = true

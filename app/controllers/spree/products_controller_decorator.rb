@@ -2,6 +2,8 @@ module Spree
   ProductsController.class_eval do
     after_action :recently_viewed, only: :show
 
+    private
+
     def recently_viewed
       id = @product.id
       rvp = (cookies['recently_viewed_products'] || '').split(', ')
